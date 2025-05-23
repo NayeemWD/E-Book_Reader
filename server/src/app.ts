@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from 'express';
 import router from './app/routes';
 
 const app: Application = express();
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const port = 3000;
 
 // parsers
