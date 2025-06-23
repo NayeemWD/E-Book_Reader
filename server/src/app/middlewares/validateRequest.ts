@@ -1,3 +1,4 @@
+// export default validateRequest;
 import { AnyZodObject } from 'zod';
 import { Request, Response, NextFunction } from 'express';
 
@@ -6,6 +7,7 @@ const validateRequest = (schema: AnyZodObject) => {
     try {
       schema.parse({ body: req.body });
       next();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       res.status(400).json({
         success: false,

@@ -1,6 +1,8 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 import router from './app/routes';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app: Application = express();
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
